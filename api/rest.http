@@ -1,0 +1,2 @@
+GET http://localhost:4040/api/azure/list-cosmos
+Content-Type: application/json
