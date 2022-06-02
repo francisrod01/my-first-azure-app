@@ -1,10 +1,6 @@
 const { CosmosClient } = require('@azure/cosmos');
-const config = require('../config/config');
+const config = require('../config');
 const azure = config.azure;
-
-module.exports = {
-  listDatabases,
-};
 
 async function listDatabases() {
   // Establish a new instance of the CosmosClient to be used throughout this demo
@@ -18,3 +14,6 @@ async function listDatabases() {
 
   return resources;
 }
+
+
+module.exports = { listDatabases };
