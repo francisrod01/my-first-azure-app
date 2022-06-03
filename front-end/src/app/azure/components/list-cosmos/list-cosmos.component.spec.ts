@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 import { ListCosmosComponent } from './list-cosmos.component';
 
@@ -8,7 +9,8 @@ describe('ListCosmosComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ListCosmosComponent ]
+      declarations: [ ListCosmosComponent ],
+      imports: [HttpClientTestingModule]
     })
     .compileComponents();
   });
