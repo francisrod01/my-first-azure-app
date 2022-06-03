@@ -13,7 +13,7 @@
     "swa:start": "swa start app",
     "swa:login": "swa login",
     "swa:deploy": "swa deploy app",
-    "postinstall": "husky install"
+    "prepare": "cd .. && husky install front-end/.husky"
   },
   "private": true,
   "dependencies": {
