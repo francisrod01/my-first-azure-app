@@ -28,9 +28,8 @@ npm test
 
 ### Run e2e tests
 
-```bash
-npm run e2e
-```
+Cypress is comming soon..
+
 
 ### Lints and fixes files
 
