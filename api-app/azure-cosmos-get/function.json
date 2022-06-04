@@ -5,8 +5,7 @@
       "type": "httpTrigger",
       "direction": "in",
       "name": "req",
-      "methods": ["get"],
-      "route": "azure/list-cosmos"
+      "methods": ["get"]
     },
     {
       "type": "http",

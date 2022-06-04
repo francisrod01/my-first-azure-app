@@ -11,6 +11,6 @@ export class CosmosService {
   constructor(private http: HttpClient) { }
 
   getDatabases() {
-    return this.http.get<Cosmos[]>('/api/azure/list-cosmos');
+    return this.http.get<Cosmos[]>('/api/azure-cosmos-get');
   }
 }
