@@ -54,3 +54,18 @@ npm run swa:login
 ```bash
 npm run swa:deploy
 ```
+
+## Azure Functions local environment variables
+
+Create a `local.settings.json file` located in `api-app` folder.
+
+```json
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "",
+    "FUNCTIONS_WORKER_RUNTIME": "node",
+    "APPLICATIONINSIGHTS_CONNECTION_STRING": ""
+  }
+}
+```

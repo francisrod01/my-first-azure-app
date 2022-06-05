@@ -1,4 +1,9 @@
+const appInsights = require('applicationinsights');
 const azureCtrl = require('../controllers/azure.controller');
+
+appInsights.setup()
+  .setAutoCollectConsole(true, true)
+  .start();
 
 async function getCosmosDBs(context, req) {
   let databases = await azureCtrl.retrieveDatabases();
