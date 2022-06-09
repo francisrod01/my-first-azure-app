@@ -69,3 +69,33 @@ Create a `local.settings.json file` located in `api-app` folder.
   }
 }
 ```
+
+## Starting the project
+
+**Using docker-compose:**
+
+```bash
+~$ docker-compose up --build
+```
+
+**Cleaning all Docker instances:**
+
+```bash
+~$ sudo docker system prune --all
+```
+
+You'll see that all containers, networks, images and build cache are gone
+
+```bash
+eleted: sha256:b405fd4a2e8fb3417e2882a0cf36ee937cf19294cb8af27a8f79c07345ce6ed4
+deleted: sha256:73a5f41dbc760c8726813924f7dfef5fe915d87a8780d81b733c1b185f2f54a8
+deleted: sha256:a6097bda76c225215708930a958a296fe31302f45c888b9db3c58ce9d9f574ad
+deleted: sha256:fb08a32d906afda391f3e305f20ab5ff1f07471fe8078ee0be6f78a8aaec964a
+deleted: sha256:04883debec4afae495d663688b7622b1678675bfb8e07a81343c580dcaae3d27
+deleted: sha256:8850254a1d99ddf5b6068bf07001df6dfc684fa2c4e8a32b18e0bdcb21640aba
+deleted: sha256:fc3f1e8526fb8791da8c7bae9ec19d9ac90d40c7c262ec6f3e1a588a08a97d8b
+deleted: sha256:e8919b3caf4b91d0012f4bd0eef316e0144e3f432ddf6fd016a3667c8af608b5
+deleted: sha256:4fc242d58285699eca05db3cc7c7122a2b8e014d9481f323bd9277baacfa0628
+
+Total reclaimed space: 2.602GB
+```

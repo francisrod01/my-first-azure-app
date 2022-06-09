@@ -1,5 +1,5 @@
 const { CosmosClient } = require('@azure/cosmos');
-const config = require('../config');
+const config = require('../config/config');
 const azure = config.azure;
 
 async function listDatabases() {
@@ -16,4 +16,6 @@ async function listDatabases() {
 }
 
 
-module.exports = { listDatabases };
+module.exports = {
+  listDatabases,
+};

@@ -5,4 +5,6 @@ async function retrieveDatabases() {
 }
 
 
-module.exports = { retrieveDatabases };
+module.exports = {
+  retrieveDatabases,
+};

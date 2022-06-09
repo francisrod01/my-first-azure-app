@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  frontend:
+    container_name: frontend
+    build:
+      context: ./front-end
+      args:
+        - API_BASE_URL=${API_BASE_URL}
+    ports:
+      - 3000:80
+    environment:
+      NODE_ENV: production
+    restart: always
+    depends_on:
+      - api
+
+  api:
+    container_name: api-app
+    build:
+      context: ./api
+    ports:
+      - 9000:9000
+    environment:
+      NODE_ENV: production
+      SERVER_PORT: 9000
+      AZURE_ENDPOINT: $AZURE_ENDPOINT
+      AZURE_MASTER_KEY: $AZURE_MASTER_KEY
+    restart: always
