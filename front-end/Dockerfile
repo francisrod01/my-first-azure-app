@@ -10,7 +10,11 @@ ENV PATH="./node_modules/.bin:$PATH"
 COPY . ./
 
 ARG API_BASE_URL=${API_BASE_URL:-}
-RUN echo "[DOCKER] API base-url: ${API_BASE_URL}"
+RUN echo "[ARGs] API base-url: ${API_BASE_URL}"
+
+ENV API_BASE_URL=${API_BASE_URL:-}
+RUN echo "[ENVs] API base-url: ${API_BASE_URL}"
+
 RUN npm run build:prod
 
 
