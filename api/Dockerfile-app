@@ -1,7 +1,13 @@
 ARG REGISTRY_NAME
 FROM ${REGISTRY_NAME}/baseimages/node:15-alpine
 
-COPY . /src
-RUN cd /src && npm install
+COPY ["package.json", "package-lock.json*", "npm-shrinkwrap.json*", "./"]
+
+## Building code for production
+RUN npm ci --only=production
+
+COPY . .
+
 EXPOSE 80
-CMD ["node", "/src/server.js"]
+
+CMD ["node", "./server.js"]
